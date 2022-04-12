@@ -16,7 +16,7 @@ npm run serve
 npm run build
 ```
 
-### Use nodemon for server delelopment,as it surport hot-reloads when files changed
+### Use nodemon for server delelopment,as it surports hot-reloads when files changed
 ```
 npm install nodemon -g
 ```
