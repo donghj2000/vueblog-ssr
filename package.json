@@ -1,0 +1,55 @@
+{
+  "name": "vueblog-ssr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:client": "vue-cli-service build --dest dist/client",
+    "build:server": "cross-env SSR=1 vue-cli-service build --dest dist/server",
+    "build": "npm run build:client && npm run build:server && node copy_static.js"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^0.2.4",
+    "@kangc/v-md-editor": "2.3.5",
+    "@vue/server-renderer": "3.2.13",
+    "axios": "^0.22.0",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^3.21.1",
+    "element-plus": "^2.1.8",
+    "express": "^4.17.3",
+    "express-http-proxy": "^1.6.3",
+    "jsdom": "^19.0.0",
+    "log4js": "^6.4.4",
+    "lru-cache": "^7.8.0",
+    "marked": "2.0.3",
+    "redis": "^3.0.6",
+    "register-service-worker": "^1.7.2",
+    "vue": "3.2.13",
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-pwa": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-import": "^1.13.3",
+    "copy-dir": "^1.3.0",
+    "cross-env": "^7.0.3",
+    "less": "^4.0.0",
+    "less-loader": "^8.0.0",
+    "typescript": "~4.5.5",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
