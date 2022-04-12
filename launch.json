@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "vuessr",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}\\server.js",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceRoot}"
+        },
+        {
+            "name": "Attach to Process",
+            "type": "node",
+            "request": "attach",
+            "port": 80
+
+        }
+    ]
+}
