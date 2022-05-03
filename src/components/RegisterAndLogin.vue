@@ -365,8 +365,8 @@ export default defineComponent({
 
     methods:{
         sendNewPasswd() {
-            this.$refs.loginForm.validateField("username", async (errMsg: string)=>{
-                if (errMsg == "") {
+            this.$refs.loginForm.validateField("username", async (isValid: boolean)=>{
+                if (isValid) {
                     try {
                         let data: any = await forgetPassword({username: this.state.loginForm.username});
                         this.$message({
@@ -388,8 +388,8 @@ export default defineComponent({
             });
         },
         handleOk() {
-            this.$refs.loginForm.validate(async (valid: boolean)=>{
-                if (valid) {
+            this.$refs.loginForm.validate(async (isValid: boolean)=>{
+                if (isValid) {
                     if (this.state.handleFlag === "login") {
                         if (this.state.remember) {
                             setCookie("blogUsername", this.state.loginForm.username, 30, 0, 0);
